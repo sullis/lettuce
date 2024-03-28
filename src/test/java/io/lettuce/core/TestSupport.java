@@ -19,17 +19,21 @@
  */
 package io.lettuce.core;
 
+import io.github.nettyplus.leakdetector.junit.NettyLeakDetectorExtension;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
 import io.lettuce.core.internal.LettuceSets;
 import io.lettuce.test.settings.TestSettings;
+import org.junit.jupiter.api.extension.ExtendWith;
+
 
 /**
  * @author Mark Paluch
  * @author Tugdual Grall
  */
+@ExtendWith(NettyLeakDetectorExtension.class)
 public abstract class TestSupport {
 
     public static final String host = TestSettings.hostAddr();

@@ -71,6 +71,7 @@
         <rxjava3.version>3.1.8</rxjava3.version>
         <reactive-streams-tck.version>1.0.4</reactive-streams-tck.version>
         <slf4j.version>1.7.25</slf4j.version>
+        <netty-leak-detector.version>0.0.5</netty-leak-detector.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- You need a running redis+sentinel for all tests, therefore disabled by default -->
@@ -409,6 +410,12 @@
             <artifactId>javaparser-core</artifactId>
             <version>3.6.3</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.nettyplus</groupId>
+            <artifactId>netty-leak-detector-junit-extension</artifactId>
+            <version>${netty-leak-detector.version}</version>
         </dependency>
 
         <!-- CDI -->
